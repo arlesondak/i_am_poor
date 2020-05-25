@@ -9,46 +9,58 @@ void main() {
         centerTitle: true,
         backgroundColor: Colors.redAccent[500],
       ),
-      body: Column(children: <Widget>[
-        // Row 1
-        Row(
-          children: [
-            Container(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+            Expanded(
+              // Row 1
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Column(
+                  Container(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image(
+                              image: AssetImage('images/1d9w_29na_170805.jpg'),
+                            ),
+                          ], // Children
+                        ),
+                      ], // Children
+                    ),
+                  ),
+                ], // Children
+              ),
+            ),
+          // Row 2
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image(
-                        image: AssetImage('images/1d9w_29na_170805.jpg'),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            child: Text('Poor Vectors by Vecteezy'),
+                            onTap: (){
+                              _launchURL();
+                            },
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ], // Children
-        ),
-        // Row 2
-        Row(
-          children: [
-            Container(
-              child: Row(
-                children: [
-                  Column(
-                    children: [
-                      GestureDetector(
-                        child: Text('Poor Vectors by Vecteezy'),
-                        onTap: (){
-                          _launchURL();
-                        },
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+          ),
       ],
       ),
     ),
