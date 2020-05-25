@@ -3,56 +3,64 @@ import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Michael!'),
-          centerTitle: true,
-          backgroundColor: Colors.redAccent[500],
-        ),
-        body: Column(children: <Widget>[
-            // Row 1
-            Row(
-              children: [
-                Container(
-                  child: Row(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('I am poor.'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent[500],
+      ),
+      body: Column(children: <Widget>[
+        // Row 1
+        Row(
+          children: [
+            Container(
+              child: Row(
+                children: [
+                  Column(
                     children: [
-                      Column(
-                        children: [
-                          Image(
-                            image: AssetImage('images/Michael Jackson.png'),
-                          ),
-                        ],
+                      Image(
+                        image: AssetImage('images/1d9w_29na_170805.jpg'),
                       ),
                     ],
                   ),
-                ),
-              ], // Children
+                ],
+              ),
             ),
-            // Row 2
-            Row(
-              children: [
-                Container(
-                  child: Row(
+          ], // Children
+        ),
+        // Row 2
+        Row(
+          children: [
+            Container(
+              child: Row(
+                children: [
+                  Column(
                     children: [
-                      Column(
-                        children: [
-                          GestureDetector(
-                            child: Text('Image Attribution'),
-                            onTap: (){
-                              print('pressed!');
-                            },
-                          ),
-                        ],
+                      GestureDetector(
+                        child: Text('Poor Vectors by Vecteezy'),
+                        onTap: (){
+                          _launchURL();
+                        },
                       ),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
+      ],
       ),
     ),
+  ),
   );
 }
 
+_launchURL() async {
+  const url = 'https://www.vecteezy.com/free-vector/poor';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
