@@ -1,4 +1,4 @@
-#Mon May 25 10:12:39 PDT 2020
+#Mon May 25 10:27:21 PDT 2020
 base.0=/Users/andrewlesondak/development/personal_projects/i_am_poor/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

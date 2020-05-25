@@ -11,57 +11,17 @@ void main() {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-            Expanded(
-              // Row 1
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image(
-                              image: AssetImage('images/1d9w_29na_170805.jpg'),
-                            ),
-                          ], // Children
-                        ),
-                      ], // Children
-                    ),
-                  ),
-                ], // Children
-              ),
-            ),
-          // Row 2
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          GestureDetector(
-                            child: Text('Poor Vectors by Vecteezy'),
-                            onTap: (){
-                              _launchURL();
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+        children: [
+          Image(
+            image: AssetImage('images/1d9w_29na_170805.jpg')
           ),
-      ],
+          GestureDetector(
+            child: Text('Poor Vectors by Vecteezy'),
+            onTap: (){
+              _launchURL();
+            },
+          ),
+        ],
       ),
     ),
   ),
